@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Node_modules files like live-server that I only need it in my computer
+.node_modules
