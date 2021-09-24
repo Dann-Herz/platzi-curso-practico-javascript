@@ -1,0 +1,25 @@
+{
+  "name": "platzi-curso-practico-javascript",
+  "version": "1.0.0",
+  "description": "Curso practico de javascript",
+  "main": "figuras.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dann-Herz/platzi-curso-practico-javascript.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Dann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dann-Herz/platzi-curso-practico-javascript/issues"
+  },
+  "homepage": "https://github.com/Dann-Herz/platzi-curso-practico-javascript#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
