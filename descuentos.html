@@ -4,9 +4,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./descuentos.css">
   <title>Porcentajes y descuentos | Curso Práctico de JavaScript</title>
 </head>
 <body>
-  <h1>Porcentajes y descuentos</h1>
+  <div id="contenedor">
+    <h1>Porcentage and discount</h1>
+    <section id="centrador">
+      <h2 class="indication">Write below the price and discount to show you how much you'll pay</h2>
+      <form class="forma" action="">
+        <br>
+        <label class="forma-message" for="precio">Product price $: </label>
+        <input class="forma-input" type="number" id="precio">
+
+        <label class="forma-message" for="descuento">Product discount %: </label>
+        <input class="forma-input" type="number" id="descuento">
+
+        <label class="forma-message" for="Cupon">Discount Coupon: </label>
+        <select class="forma-select" name="" id="cupon">
+          <option value="1">0%</option>
+          <option value="25">25%</option>
+          <option value="30">30%</option>
+          <option value="40">40%</option>
+          <option value="45">45%</option>
+          <option value="50">50%</option>
+        </select>
+        <button class="forma-button" type="button" onclick="imprimirOferta()"><strong>Calculate</strong></button>
+        <p id="oferta"></p>
+      </form>
+    </section>
+  </div>
+
+  <script src="./descuentos.js"></script>
 </body>
 </html>
