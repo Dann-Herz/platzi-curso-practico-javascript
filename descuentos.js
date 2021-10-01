@@ -51,12 +51,35 @@ function imprimirOferta() {
     } else {
       const precioConDescuento = (precioTotal / 100) * (100 - descuento);
       const precioConCupon = precioConDescuento - ((precioTotal / 100) * datos.value);
-      document.getElementById("oferta").innerHTML = `Your product with dicount is $${precioConCupon}`
+      document.getElementById("oferta").innerHTML = `Your product with dicount is $${precioConCupon.toFixed(2)}`
     }
   
   }
+}
 
- 
+document.getElementById("precio").addEventListener("keydown", enterdescuento)
 
+function enterdescuento(event) {
+  if (event.keyCode == 13) {
+    document.getElementById("descuento").focus()
+  }
+
+}
+
+document.getElementById("descuento").addEventListener("keydown", entercupon )
+
+function entercupon(event) {
+  if(event.keyCode == 13) {
+    document.getElementById("Cupon").focus()
+  }
+}
+
+document.getElementById("Cupon").addEventListener("keydown", enterbutton )
+
+function enterbutton(event) {
+  if(event.keyCode == 13) {
+    document.getElementById("button").focus()
+    imprimirOferta()
+  }
 }
 
