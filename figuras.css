@@ -1,0 +1,14 @@
+body {
+  background: linear-gradient(to bottom, #0F2027, #203A43, #2C5364);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 6rem;
+}
+
+canvas { 
+  border: 2px solid rgba(4, 13, 56, 0.144); 
+}

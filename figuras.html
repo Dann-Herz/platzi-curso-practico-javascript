@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./figuras.css">
   <title>Figuras geométricas | Curso Practico de JavaScript</title>
 </head>
-<body>
+<body onload="dibujartriangulo()">
   <header>
     <h1>Figuras geométricas</h1>
     <p>Este es el primer taller del curso práctico de JavaScript</p>
@@ -15,19 +16,17 @@
   <section>
     <div>
       <h2>Calcula el área y perímetro de un cuadrado</h2>
-      <form action="">
+      <div>
         <label for="InputCuadrado">
-          Escribe cuánto mide cada lado de tu cuadrado:
+          Escribe cuánto mide cada lado de tu cuadrado y aparecera el resultado al da enter:
         </label>
-        <input id="InputCuadrado" type="number">
-        <button type="button" onclick="calcularPermetroCuadrado()">
-          Calcular el perimetro
-        </button>
-        <button type="button" onclick="calcularAreaCuadrado()">
-          Calcular el área
-        </button>
-      </form>
+        <input id="InputCuadrado" onchange="calcularDatoDeCuadrado()" type="number">
+      </div>
+      <p id="resultado-cuadrado-perimetro"></p>
+      <p id="resultado-cuadrado-area"></p>
     </div>
+    <!-- <canvas id="tutorial" width="150" height="150"></canvas> -->
+    <canvas id="canvas-cuadrado" width="150" height="150"></canvas>
     <div>
       <h2>Calcula el área y perímetro de un triangulo</h2>
       <form action="">
@@ -56,6 +55,11 @@
         <p id="alturatriangulo"></p>
         <p id="perimetrotriangulo"></p>
         <p id="areatriangulo"></p>
+        <p id="angulo1"></p>
+        <p id="angulo2"></p>
+        <p id="angulo3"></p>
+        <p id="sumaAngulos"></p>
+        <p id="mensaje">Abajo va a aparecer el tringulo graficado por pixeles según como los escribas</p>
         <!-- <button type="button" onclick="calcularPermetroCuadrado()">
           Calcular el perimetro
         </button>
@@ -64,7 +68,20 @@
         </button> -->
       </form>
     </div>
-
+    <canvas id="canvas-triangulo" width="150" height="150"></canvas>
+    <div class="Circulo">
+      <h2>Calcula el área y perímetro de un circulo</h2>
+      <div>
+        <label for="InputCirculo">
+          Escribe cuánto mide el rádio de tu circulo, tu respuesta saldrá en cuanto des enter:
+        </label>
+        <input id="InputCirculo" type="number" onchange="darDatosDelCirculo()">
+      </div>
+      <p id="resultado-circulo-diametro"></p>
+      <p id="resultado-circulo-perimetro"></p>
+      <p id="resultado-circulo-area"></p>
+      <canvas id="canvas-circulo" width="150" height="150"></canvas>
+    </div>
   </section>
   <script src="./figuras.js"></script>
 </body>
