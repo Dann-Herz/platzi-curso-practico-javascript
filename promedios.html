@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./promedios.css">
+  <title>Promedios</title>
+</head>
+<body>
+  <div>
+    10%
+  </div>
+  <div>
+    10% Puedes crear tu propia lista de números o puedes elegir cualquiera de las siguientes ya creadas
+    <form class="crear-lista" action="">
+      <label class="crear-lista__label" for="crear-lista__input">Escribe una nueva lista como se muestra en el siguiente ejemplo
+        <img class="crear-lista__label-img" src="./img/3Kc6H889ct.gif" alt="gif de ejemplo de cómo escribir una lista">
+      </label>
+      <input class="crear-lista__input" type="text" id="crear-lista__input">
+      <button type="button" class="crear-lista__button" onclick="crearLista()"><strong>¡Crear lista!</strong></button>
+      <p id="crear-lista__mensaje"></p>
+    </form>
+  </div>
+  <div>
+    30% Listas ya creadas, cuatro cuadros
+  </div>
+  <div>
+    10% también puedes crearla con números al azar
+  </div>
+  <div>
+    <h1>Promedios</h1>
+    <form action="">
+      <label for="array">20Por favor seleccione la lista de numeros que quiere usar</label>
+      <select name="" id="array" onchange="tomadorDeDecisión()">
+        <option value="">Seleccione por favor</option>
+        <option value="0">Lista 1</option>
+        <option value="1">Lista 2</option>
+        <option value="2">Lista 3</option>
+        <option value="3">Lista 4</option>
+      </select>
+    </form>
+  </div>
+  <p id="lista"></p>
+  <p id="media-aritmetica"></p>
+  <p id="mediana"></p>
+  <p id="moda"></p>
+  <p id="media-geometrica"></p>
+  <p id="media-armonica"></p>
+  <p id="medio-rango"></p>
+  <p id="media-cuadratica"></p>
+
+  <script src="./promedios.js"></script>
+</body>
+</html>
