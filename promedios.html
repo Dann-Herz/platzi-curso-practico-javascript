@@ -8,47 +8,105 @@
   <title>Promedios</title>
 </head>
 <body>
-  <div>
-    10%
+  <div class="header">
+    <picture class="header-picture">
+      <img src="./img/Logo.png" alt="">
+    </picture>
+    <div class="header-titulo">
+      Tipos de promedio
+    </div>
   </div>
+  <!-- Seccion para crear tu lista  -----------------------------------------  -->
   <div>
-    10% Puedes crear tu propia lista de números o puedes elegir cualquiera de las siguientes ya creadas
+    
     <form class="crear-lista" action="">
-      <label class="crear-lista__label" for="crear-lista__input">Escribe una nueva lista como se muestra en el siguiente ejemplo
+      <label class="crear-lista__label" for="crear-lista__input">Escribe una nueva lista como se muestra en el siguiente ejemplo con comas
         <img class="crear-lista__label-img" src="./img/3Kc6H889ct.gif" alt="gif de ejemplo de cómo escribir una lista">
       </label>
       <input class="crear-lista__input" type="text" id="crear-lista__input">
-      <button type="button" class="crear-lista__button" onclick="crearLista()"><strong>¡Crear lista!</strong></button>
+      <div class="crear-lista-buttons">
+        <button type="button" class="crear-lista__button" onclick="crearLista()"><strong>¡Crear lista personalizada!</strong></button>
+        <p>o tambien puedes</p>
+        <button type="button" class="crear-lista__button2" onclick="crearListaAlAzar()"><strong>¡Crear lista al azar en automático!</strong></button>
+      </div>
       <p id="crear-lista__mensaje"></p>
     </form>
   </div>
-  <div>
-    30% Listas ya creadas, cuatro cuadros
+  <!-- Seccion para seleccionar lista ----------------------------------------  -->
+  <div id="listas">
+    <section class="listas-cuadricula">
+      <div class="listas-cuadricula__elemento" value="0" onclick="tomadorDeDecisión(3)">
+        2,2,2,3,34,5,5,6,4,6,6,6,5,7,5,3,4,6,7,88,8,7,6,7,8,9,88,8
+      </div>
+      <div class="listas-cuadricula__elemento" value="1" onclick="tomadorDeDecisión(2)">
+        23,3,24,3,44,5,466,576,768,7,5,6,54,3,4,7,6,8,88,4,5,3,23,1
+      </div>
+      <div class="listas-cuadricula__elemento" value="2" onclick="tomadorDeDecisión(1)">
+        2,2,2,2,21,4,4,34,53,53,43,34,5,3,43,2,5,65,7,7,57,8,4
+      </div>
+      <div  class="listas-cuadricula__elemento" onclick="tomadorDeDecisión(0)">
+        2,2,3,2,2,1,1,2,4,5,5,5,5,5,5,5,5,9
+      </div>
+      <p id="Primer-elemento"></p>
+
+
+    </section>
   </div>
-  <div>
-    10% también puedes crearla con números al azar
+  <!-- Seccion para resultados  -----------------------------------------------  -->
+
+  <div class="resultados"> 
+    <div class="resultados-separador">
+      <h1>Promedios</h1>
+      <div>
+        <h2 id="lista-h2"></h2>
+        <p id="lista"></p>
+      </div>
+      <div>
+        <h2 id="media-aritmetica-h2"></h2>
+        <p id="media-aritmetica-p"></p>
+        <img id="media-aritmetica-img">
+        <p id="media-aritmetica"></p>
+      </div>
+      <div>
+        <h2 id="mediana-h2"></h2>
+        <p id="mediana-p"></p>
+        <img id="mediana-img">
+        <p id="mediana"></p>
+      </div>
+      <div>
+        <h2 id="moda-h2"></h2>
+        <p id="moda-p"></p>
+        <img id="moda-img">
+        <p id="moda"></p>
+      </div>
+      <div>
+        <h2 id="media-geometrica-h2"></h2>
+        <p id="media-geometrica-p"></p>
+        <img id="media-geometrica-img">
+        <p id="media-geometrica"></p>
+      </div>
+      <div>
+        <h2 id="media-armonica-h2"></h2>
+        <p id="media-armonica-p"></p>
+        <img id="media-armonica-img">
+        <p id="media-armonica"></p>
+      </div>
+      <div>
+        <h2 id="medio-rango-h2"></h2>
+        <p id="medio-rango-p"></p>
+        <img id="medio-rango-img">
+        <p id="medio-rango"></p>
+      </div>
+      <div>
+        <h2 id="media-cuadratica-h2"></h2>
+        <p id="media-cuadratica-p"></p>
+        <img id="media-cuadratica-img">
+        <p id="media-cuadratica"></p>
+      </div>
+    </div>
+
   </div>
-  <div>
-    <h1>Promedios</h1>
-    <form action="">
-      <label for="array">20Por favor seleccione la lista de numeros que quiere usar</label>
-      <select name="" id="array" onchange="tomadorDeDecisión()">
-        <option value="">Seleccione por favor</option>
-        <option value="0">Lista 1</option>
-        <option value="1">Lista 2</option>
-        <option value="2">Lista 3</option>
-        <option value="3">Lista 4</option>
-      </select>
-    </form>
-  </div>
-  <p id="lista"></p>
-  <p id="media-aritmetica"></p>
-  <p id="mediana"></p>
-  <p id="moda"></p>
-  <p id="media-geometrica"></p>
-  <p id="media-armonica"></p>
-  <p id="medio-rango"></p>
-  <p id="media-cuadratica"></p>
+
 
   <script src="./promedios.js"></script>
 </body>
